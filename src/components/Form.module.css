@@ -1,0 +1,50 @@
+.container {
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: "Markazi Text", serif;
+  font-size: 4rem;
+  color: #f4ce14;
+  margin-bottom: 0;
+}
+
+.form {
+  font-family: "Karla", sans-serif;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.radios {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin: 2rem 0;
+}
+
+.inputs > input,
+.inputs > select {
+  border-radius: 0.5rem;
+  height: 2rem;
+  max-width: 15rem;
+}
+
+.error {
+  font-family: "Karla", serif;
+  color: rgba(218, 48, 48, 0.867);
+}
+
+.success {
+  font-family: "Karla", serif;
+  color: rgba(48, 218, 99, 0.867);
+}

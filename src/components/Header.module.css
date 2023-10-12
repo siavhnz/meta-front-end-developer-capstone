@@ -1,0 +1,10 @@
+.container > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container {
+  background-color: #edefee;
+  padding: 1rem;
+}

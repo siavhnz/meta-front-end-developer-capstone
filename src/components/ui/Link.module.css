@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  color: #333;
+  background-color: #f4ce14;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.container:hover {
+  background-color: #495e57;
+  color: #fff;
+}
