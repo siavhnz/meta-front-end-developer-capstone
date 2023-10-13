@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Wrapper from "./Wrapper";
-import styles from "./Form.module.css";
+import styles from "./BookingForm.module.css";
 import Button from "./ui/Button";
 
-function Form() {
+function BookingForm({ availableTimes }) {
   const [state, setState] = useState({
     level: 1,
     section1validation: {
@@ -14,7 +14,7 @@ function Form() {
       date: "",
       diners: 1,
       occasion: "Birthday",
-      time: "5",
+      time: availableTimes[0],
     },
     section2validation: {
       isTouched: false,
@@ -27,7 +27,6 @@ function Form() {
       phoneNumber: "",
     },
   });
-  console.log(state);
   const section1SubmitHandler = (e) => {
     e.preventDefault();
 
@@ -98,7 +97,7 @@ function Form() {
 
   return (
     <Wrapper>
-      <div className={styles.container}>
+      <section className={styles.container}>
         <h1 className={styles.title}>Reservation</h1>
         {state.level === 1 && (
           <form className={styles.form} onSubmit={section1SubmitHandler}>
@@ -206,12 +205,13 @@ function Form() {
                       })
                     }
                   >
-                    <option value="5">5:00 pm</option>
-                    <option value="6">6:00 pm</option>
-                    <option value="7">7:00 pm</option>
-                    <option value="8">8:00 pm</option>
-                    <option value="9">9:00 pm</option>
-                    <option value="10">10:00 pm</option>
+                    {availableTimes.map((item) => {
+                      return (
+                        <option key={item.value} value={item.value}>
+                          {item.text}
+                        </option>
+                      );
+                    })}
                   </select>
                 </div>
               </div>
@@ -326,9 +326,9 @@ function Form() {
             <br /> Check your email.
           </div>
         )}
-      </div>
+      </section>
     </Wrapper>
   );
 }
 
-export default Form;
+export default BookingForm;

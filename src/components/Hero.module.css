@@ -1,6 +1,4 @@
 .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   margin: 4rem 0;
 }
 
@@ -20,6 +18,7 @@
   font-size: 4rem;
   color: #f4ce14;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .subtitle {
@@ -27,6 +26,7 @@
   font-size: 2rem;
   color: #333;
   margin-top: 0;
+  text-align: center;
 }
 
 .paragraph {
@@ -35,13 +35,39 @@
   font-weight: medium;
   color: #333;
   line-height: 1.5rem;
-  padding-right: 4rem;
+  text-align: center;
+  padding: 1rem;
 }
-
 .button {
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
+
 .button a {
   text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 4rem 0;
+  }
+
+  .title,
+  .subtitle,
+  .paragraph {
+    text-align: left;
+  }
+
+  .paragraph {
+    padding-right: 4rem;
+  }
+  .button {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
 }

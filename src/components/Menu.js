@@ -4,7 +4,7 @@ import styles from "./Menu.module.css";
 
 function Menu() {
   return (
-    <div>
+    <nav>
       <ul className={styles.container}>
         <li>
           <NavLink
@@ -27,7 +27,7 @@ function Menu() {
         <li>Delivery Basket</li>
         <li>Login</li>
       </ul>
-    </div>
+    </nav>
   );
 }
 

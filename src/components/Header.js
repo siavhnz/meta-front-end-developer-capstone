@@ -6,12 +6,12 @@ import Wrapper from "./Wrapper";
 
 function Header() {
   return (
-    <div className={styles.container}>
+    <header className={styles.container}>
       <Wrapper>
         <Logo />
         <Menu />
       </Wrapper>
-    </div>
+    </header>
   );
 }
 

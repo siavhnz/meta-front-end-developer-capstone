@@ -9,6 +9,7 @@
   font-size: 4rem;
   color: #f4ce14;
   margin-bottom: 0;
+  padding: 0 2rem;
 }
 
 .form {
@@ -17,7 +18,8 @@
 
 .section {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  padding:0 2rem;
 }
 
 .radios {
@@ -47,4 +49,11 @@
 .success {
   font-family: "Karla", serif;
   color: rgba(48, 218, 99, 0.867);
+}
+
+@media (min-width: 600px) {
+  .section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

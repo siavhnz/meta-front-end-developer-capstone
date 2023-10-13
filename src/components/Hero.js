@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 function Hero() {
   return (
     <Wrapper>
-      <div className={styles.container}>
+      <section className={styles.container}>
         <div>
           <h1 className={styles.title}>Little Lemon</h1>
           <p className={styles.subtitle}>Chicago</p>
@@ -26,7 +26,7 @@ function Hero() {
         <div className={styles.img}>
           <img src={RestaurantImage} alt="restaurant" />
         </div>
-      </div>
+      </section>
     </Wrapper>
   );
 }
